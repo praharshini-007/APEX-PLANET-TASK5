@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Adhityan</title>
+  <link rel="stylesheet" href="/ApexWebdev/webdevtask/task05/css/styles.min.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1>praharshini</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<section class="container">
+  <h2>Contact Me</h2>
+  <h3>I'd love to hear from you!</h3>
+  <p>If you have any questions, feedback, or just want to say hi, feel free to reach out using the form below.</p>
+    <p>You can also connect with me on the belows links </p> 
+    <!-- Social Links Section -->
+<section class="social-links">
+  <a href="https://github.com/Adhityan15" target="_blank" rel="noopener noreferrer">
+    <img src="/ApexWebdev/webdevtask/task05/images/github.jpeg" alt="GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/adhityan-r-1b8b2a1b0/" target="_blank" rel="noopener noreferrer">
+    <img src="/ApexWebdev/webdevtask/task05/images/linkedin.webp" alt="LinkedIn" />
+  </a>
+</section>
+<section>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast">✅ Message sent successfully! 💌</div>
+
+
+<section class="container">
+  <h3></h3> 
+    <p>Fill out the form below to send me a message. I'll get back to you as soon as possible!</p>
+    <p> . </p>
+    <p> . </p>
+    <p> . </p>
+    <p> . </p>
+
+
+  
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Adhityan. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent actual submission
+    const toast = document.getElementById("toast");
+    
+    toast.classList.add("show");
+    this.reset(); // optional: clears form fields
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  });
+</script>
+
+
+</body>
+</html>

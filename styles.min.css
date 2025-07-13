@@ -1,0 +1,243 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+background: linear-gradient(135deg, #c4dded 0%, #ffffff 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+    box-shadow: 5 20px 18px rgba(0, 0, 0, 0.05);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background: whitesmoke;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5 20px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px 0;
+}
+.navbar h1 {
+    box-shadow: 5 20px 8px rgba(0, 0, 0, 0.05);
+  font-size: 1.8rem;
+  color: #7296c0;
+}
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-links {
+    background-color: transparent;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: #0077ff;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.05);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+.navbarproject {
+    background: transparent;
+    border-bottom: 1px solid #e0e0e0;
+}
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: white;
+  color: #0077ff;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.hero .btn:hover {
+  background-color: #e6f2ff;
+}
+
+/* Project Cards */
+.projects {
+  padding: 60px 20px;
+}
+.projects h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+}
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-card h3 {
+  padding: 15px 20px 5px;
+  font-size: 1.2rem;
+}
+.project-card p {
+  padding: 0 20px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Forms */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: auto;
+}
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+form button {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #005fcb;
+}
+
+/* Footer */
+footer {
+  background: transparent;
+  color: rgb(11, 135, 231);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.toast {
+  visibility: hidden;
+  min-width: 260px;
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease, bottom 0.5s ease;
+}
+
+
+/* Add this to your CSS file */
+/* Compact, animated social links */
+.social-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+  background: #fff;
+}
+
+.social-links a:hover img,
+.social-links a:focus img {
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  outline: 2px solid #0077b5; /* LinkedIn blue for focus */
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+.toast.hide {
+  visibility: hidden;
+  opacity: 0;
+  bottom: 30px;
+}
